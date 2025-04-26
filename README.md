@@ -1,9 +1,16 @@
-# project-name
+# blockcontent
 
-Do whatever you want with this template, typically used to create a new project.
+**Structured Content Format for AI Agents, Interfaces, and Beyond**
 
-## Variables
+`blockcontent` is a schema-driven format designed for expressing structured, modular content blocks — suitable for AI assistant outputs, dynamic UI rendering, industrial workflows, or knowledge representation.
 
-> globally replace the following variable(eg, `git-repo-name`) with your project details using your editor's find-and-replace tool.
+## ✨ Motivation
 
-- git-repo-name: the Git repository name
+Modern AI applications, interfaces, and automation systems often need to generate or interpret structured content — not just plain text. Whether it's a chart, a configuration form, a summarized section, or a warning, we need a shared way to express these **blocks of meaning**.
+
+`blockcontent` provides:
+
+- 🧱 **Composable Blocks** – like `text`, `chart`, `alert`, etc.
+- 🌐 **Multi-language SDKs** – auto-generated from a shared schema
+- 🤖 **Agent-Friendly Output** – designed for LangChain, ReAct, RAG, etc.
+- 🔧 **Spec-Driven Design** – define once, generate everywhere

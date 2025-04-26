@@ -1,0 +1,64 @@
+openapi: 3.1.1
+info:
+  title: BlockContent Spec
+  version: 0.0.1
+
+components:
+  schemas:
+    Block:
+      type: object
+      description: A content block, used to represent structured sections such as text, charts, etc.
+      properties:
+        type:
+          type: string
+          description: type of block
+          enum:
+            - chart
+            - table
+            - text
+        chart_block:
+          $ref: "#/components/schemas/ChartBlock"
+        table_block:
+          $ref: "#/components/schemas/TableBlock"
+        text_block:
+          $ref: "#/components/schemas/TextBlock"
+    ChartBlock:
+      type: object
+      properties:
+        chart_type:
+          type: string
+          description: type of chart
+          enum:
+            - bar
+            - line
+            - pie
+    BarChart:
+      type: object
+      properties:
+        data:
+          type: object
+          description: Generic data payload for charts
+          additionalProperties:
+            type: object
+    LineChart:
+      type: object
+    PieChart:
+      type: object
+    TableBlock:
+      type: object
+      properties:
+        headers:
+          type: array
+          items:
+            type: string
+        rows:
+          type: array
+          items:
+            type: array
+            items:
+              type: string
+    TextBlock:
+      type: object
+      properties:
+        content:
+          type: string
