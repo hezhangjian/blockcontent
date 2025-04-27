@@ -1,7 +1,7 @@
 openapi: 3.1.1
 info:
   title: BlockContent Spec
-  version: 0.0.1
+  version: 0.0.2
 
 components:
   schemas:
@@ -32,18 +32,21 @@ components:
             - bar
             - line
             - pie
-    BarChart:
-      type: object
-      properties:
-        data:
-          type: object
-          description: Generic data payload for charts
-          additionalProperties:
+        labels:
+          type: array
+          items:
+            type: string
+        datasets:
+          type: array
+          items:
             type: object
-    LineChart:
-      type: object
-    PieChart:
-      type: object
+            properties:
+              label:
+                type: string
+              data:
+                type: array
+                items:
+                  type: number
     TableBlock:
       type: object
       properties:

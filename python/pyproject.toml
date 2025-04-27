@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "blockcontent"
-version = "0.0.1"
+version = "0.0.2"
 description = "BlockContent Spec"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
 license = "NoLicense"

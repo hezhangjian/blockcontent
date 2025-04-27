@@ -6,6 +6,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **chart_type** | **str** | type of chart | [optional] 
+**labels** | **List[str]** |  | [optional] 
+**datasets** | [**List[ChartBlockDatasetsInner]**](ChartBlockDatasetsInner.md) |  | [optional] 
 
 ## Example
 
