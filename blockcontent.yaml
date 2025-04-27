@@ -1,7 +1,7 @@
 openapi: 3.1.1
 info:
   title: BlockContent Spec
-  version: 0.0.2
+  version: 0.1.0
 
 components:
   schemas:
@@ -16,13 +16,15 @@ components:
             - chart
             - table
             - text
-        chart_block:
-          $ref: "#/components/schemas/ChartBlock"
-        table_block:
-          $ref: "#/components/schemas/TableBlock"
-        text_block:
-          $ref: "#/components/schemas/TextBlock"
-    ChartBlock:
+        chart_content:
+          $ref: "#/components/schemas/ChartContent"
+        table_content:
+          $ref: "#/components/schemas/TableContent"
+        text_content:
+          $ref: "#/components/schemas/TextContent"
+      required:
+        - type
+    ChartContent:
       type: object
       properties:
         chart_type:
@@ -32,6 +34,7 @@ components:
             - bar
             - line
             - pie
+            - scatter
         labels:
           type: array
           items:
@@ -47,7 +50,11 @@ components:
                 type: array
                 items:
                   type: number
-    TableBlock:
+      required:
+        - chart_type
+        - labels
+        - datasets
+    TableContent:
       type: object
       properties:
         headers:
@@ -60,8 +67,13 @@ components:
             type: array
             items:
               type: string
-    TextBlock:
+      required:
+        - headers
+        - rows
+    TextContent:
       type: object
       properties:
-        content:
+        text:
           type: string
+      required:
+        - text

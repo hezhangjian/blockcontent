@@ -6,10 +6,10 @@ A content block, used to represent structured sections such as text, charts, etc
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **str** | type of block | [optional] 
-**chart_block** | [**ChartBlock**](ChartBlock.md) |  | [optional] 
-**table_block** | [**TableBlock**](TableBlock.md) |  | [optional] 
-**text_block** | [**TextBlock**](TextBlock.md) |  | [optional] 
+**type** | **str** | type of block | 
+**chart_content** | [**ChartContent**](ChartContent.md) |  | [optional] 
+**table_content** | [**TableContent**](TableContent.md) |  | [optional] 
+**text_content** | [**TextContent**](TextContent.md) |  | [optional] 
 
 ## Example
 

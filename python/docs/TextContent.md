@@ -1,28 +1,28 @@
-# TextBlock
+# TextContent
 
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | **str** |  | [optional] 
+**text** | **str** |  | 
 
 ## Example
 
 ```python
-from blockcontent.models.text_block import TextBlock
+from blockcontent.models.text_content import TextContent
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of TextBlock from a JSON string
-text_block_instance = TextBlock.from_json(json)
+# create an instance of TextContent from a JSON string
+text_content_instance = TextContent.from_json(json)
 # print the JSON string representation of the object
-print(TextBlock.to_json())
+print(TextContent.to_json())
 
 # convert the object into a dict
-text_block_dict = text_block_instance.to_dict()
-# create an instance of TextBlock from a dict
-text_block_from_dict = TextBlock.from_dict(text_block_dict)
+text_content_dict = text_content_instance.to_dict()
+# create an instance of TextContent from a dict
+text_content_from_dict = TextContent.from_dict(text_content_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

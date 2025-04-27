@@ -5,10 +5,10 @@ README.md
 package.json
 src/index.ts
 src/models/Block.ts
-src/models/ChartBlock.ts
-src/models/ChartBlockDatasetsInner.ts
-src/models/TableBlock.ts
-src/models/TextBlock.ts
+src/models/ChartContent.ts
+src/models/ChartContentDatasetsInner.ts
+src/models/TableContent.ts
+src/models/TextContent.ts
 src/models/index.ts
 src/runtime.ts
 tsconfig.json
