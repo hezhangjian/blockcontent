@@ -1,7 +1,7 @@
 openapi: 3.1.1
 info:
   title: BlockContent Spec
-  version: 0.1.0
+  version: 0.2.0
 
 components:
   schemas:
@@ -18,6 +18,8 @@ components:
             - text
         chart_content:
           $ref: "#/components/schemas/ChartContent"
+        code_content:
+          $ref: "#/components/schemas/CodeContent"
         table_content:
           $ref: "#/components/schemas/TableContent"
         text_content:
@@ -54,6 +56,16 @@ components:
         - chart_type
         - labels
         - datasets
+    CodeContent:
+      type: object
+      properties:
+        language:
+          type: string
+        code:
+          type: string
+      required:
+        - language
+        - code
     TableContent:
       type: object
       properties:
