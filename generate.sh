@@ -18,7 +18,7 @@ openapi-generator generate \
   -o "$PYTHON_DIR" \
   --package-name blockcontent \
   --global-property models,supportingFiles \
-  --additional-properties=projectName=blockcontent,packageVersion=0.1.0
+  --additional-properties=projectName=blockcontent,packageVersion=0.2.0,setEnsureAsciiToFalse=true
 
 echo "🚀 Generating TypeScript SDK..."
 openapi-generator generate \
@@ -26,7 +26,7 @@ openapi-generator generate \
   -g typescript-fetch \
   -o "$TS_DIR" \
   --global-property models,supportingFiles \
-  --additional-properties=npmName=blockcontent,npmVersion=0.1.0,typescriptThreePlus=true
+  --additional-properties=npmName=blockcontent,npmVersion=0.2.0,typescriptThreePlus=true
 
 echo "🚀 Generating Rust SDK..."
 openapi-generator generate \
@@ -34,6 +34,6 @@ openapi-generator generate \
   -g rust \
   -o "$RUST_DIR" \
   --global-property models,supportingFiles \
-  --additional-properties=packageName=blockcontent,packageVersion=0.1.0
+  --additional-properties=packageName=blockcontent,packageVersion=0.2.0
 
 echo "✅ SDK generation complete."
